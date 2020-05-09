@@ -4,6 +4,23 @@
 
 This document contains the specification for an SPDX document, which is made up of a set of **zero/one** or more Facts, instances of which contain information in the form of *fields*. The following subclause introduces the different kinds of Facts allowed. The fields for each kind of Fact are defined in the clause corresponding to that Fact.
 
+## Packages <a name="1.6"></a>
+
+A Package is any unit of content that can be associated with a distribution of software. Typically, a Package is composed of one or more files. An SPDX document may, but is not required to, provide details about the individual files comprising a Package (see [Clause F](4-file-information.md)).
+
+Any of the following non-limiting examples may be (but are not required to be) represented in SPDX as a Package:
+
+* a tarball, zip file or other archive
+* a directory or sub-directory
+* a separately-distributed piece of software which another Package or File uses or depends upon (e.g., a Python package, a Go module, ...)
+* a container image, and/or each image layer within a container image
+* a collection of one or more sub-packages
+* a Git repository snapshot from a particular point in time
+
+Note that some of these could be represented in SPDX as a File as well.
+
+In an SPDX document, Relationship elements may be used to indicate relationships between Packages, such as dependency relationships.
+
 ## Facts
 
 ### **1.4.1** SPDX Document Creation Information Fact
