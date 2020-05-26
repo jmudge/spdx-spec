@@ -23,7 +23,21 @@ Here, parties exchanging information in accordance with the SPDX specification n
 | Format | Example |
 | -------- | ------- |
 | Tag/Value | `SPDXVersion: SPDX-2.2` |
-| RDF | `<SpdxDocument rdf:about="...">`<br>&nbsp;&nbsp;&nbsp;`<specVersion>SPDX-2.2</specVersion>`<br>`</SpdxDocument>`<br>This specification uses the prefix `rdf:` to refer to the [RDF/XML][rdf] namespace:<br>`http://www.w3.org/1999/02/22-rdf-syntax-ns#` |
+| RDF | <sup>[a](#SPDXversionRDF)</sup> |
+
+<sup><a name="SPDXversionRDF">a</a></sup> SPDX version field RDF example
+```text
+<SpdxDocument rdf:about="...">
+   <specVersion>SPDX-2.2</specVersion>
+</SpdxDocument>
+```
+
+This specification uses the prefix `rdf:` to refer to the [RDF/XML][rdf] namespace:
+
+```text
+http://www.w3.org/1999/02/22-rdf-syntax-ns#
+```
+
 
 ## 6.2 Data license field <a name="2.2"></a>
 
@@ -50,7 +64,14 @@ This is to alleviate any concern that content (the data or database) in an SPDX 
 | Format | Example |
 | -------- | ------- |
 | Tag/Value | `DataLicense: CC0-1.0` |
-| RDF | `<SpdxDocument rdf:about="...">`<br>&nbsp;&nbsp;`<dataLicense rdf:resource="http://spdx.org/licenses/CC0-1.0" />`<br>`</SpdxDocument>` |
+| RDF | <sup>[a](#DataLicenseRDF)</sup> |
+
+<sup><a name="DataLicenseRDF">a</a></sup> Data license field RDF example
+```text
+<SpdxDocument rdf:about="...">
+  <dataLicense rdf:resource="http://spdx.org/licenses/CC0-1.0" />
+</SpdxDocument>
+```
 
 ## 6.3 SPDX identifier field <a name="2.3"></a>
 
@@ -75,7 +96,15 @@ Provide a way for the document to refer to itself in relationship to other eleme
 | Format | Example |
 | -------- | ------- |
 | Tag/Value | `SPDXID: SPDXRef-DOCUMENT` |
-| RDF | `<spdx:SpdxDocument`<br>`rdf:about="http://spdx.org/spdxdocs/spdx-example-444504E0-4F89-41D3-9A0C-0305E82C33123#SPDXRef-DOCUMENT">`<br>`...`<br>`</spdx:SpdxDocument>` |
+| RDF | <sup>[a](#SPDXidentifierRDF)</sup> |
+
+<sup><a name="SPDXidentifierRDF">a</a></sup> SPDX identifier field RDF example
+```text
+<spdx:SpdxDocument 
+  rdf:about="http://spdx.org/spdxdocs/spdx-example-444504E0-4F89-41D3-9A0C-0305E82C33123#SPDXRef-DOCUMENT">
+...
+</spdx:SpdxDocument>
+```
 
 ## 6.4 Document name field <a name="2.4"></a>
 
